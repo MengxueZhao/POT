@@ -1,0 +1,84 @@
+
+===== data.pkl: data_pair =====
+
+user_index: target user index [1]
+input_pois: target user reviewed pois and target poi [max_up_length+1]
+input_user_history: CL for target user reviewed pois [max_up_length+1, pos_neg_sample, max_ua_length, max_uaw_length]
+                    each poi have pos_neg_sample CL negative user samples, each negative user have an WAU meath path
+
+input_poi_words: transformer input, poi historical reviews word [max_pw_length]
+
+output_ugc_label: target opinion tagging label [top_number, max_label_length]
+output_rank_label: target aspect rank score [total_aspect_number]
+
+input_user_index: update user for neighbor noising in HMBG [25]
+input_behavior_poi_index: poi for neighbor noising in HMBG [25, max_up_length * 2 + max_up_length // 3]
+                          for each user in input_user_index, sample some pois for neighbor noising in HMBG
+input_behavior_labels: review interaction label [25, max_up_length * 2 + max_up_length // 3]
+                       review interaction label for user in input_user_index and poi in input_behavior_poi_index
+
+
+===== data.pkl: vocab =====
+class Lang
+
+===== data.pkl: data_pair =====
+
+user_index: target user index [1]
+input_pois: target user reviewed pois and target poi [max_up_length+1]
+input_user_history: CL for target user reviewed pois [max_up_length+1, pos_neg_sample, max_ua_length, max_uaw_length]
+                    each poi have pos_neg_sample CL negative user samples, each negative user have an WAU meath path
+
+input_poi_words: transformer input, poi historical reviews word [max_pw_length]
+
+output_ugc_label: target opinion tagging label [top_number, max_label_length]
+output_rank_label: target aspect rank score [total_aspect_number]
+
+input_user_index: update user for neighbor noising in HMBG [25]
+input_behavior_poi_index: poi for neighbor noising in HMBG [25, max_up_length * 2 + max_up_length // 3]
+                          for each user in input_user_index, sample some pois for neighbor noising in HMBG
+input_behavior_labels: review interaction label [25, max_up_length * 2 + max_up_length // 3]
+                       review interaction label for user in input_user_index and poi in input_behavior_poi_index
+
+
+===== data.pkl: vocab =====
+class Lang
+
+
+===== data.pkl: vector_dict =====
+pretrained vector from Tencent AI Lab
+
+
+===== matrix.pkl: Matrixes =====
+
+uaw_matrix: WAU meta path for each user [total_user_number, max_ua_length, max_uaw_length]
+paw_matrix: WAP meta path in WAPU meta path for each poi [total_poi_number, max_pa_length, max_paw_length]
+pu_matrix: CL user samples for each poi [total_poi_number, pos_neg_sample * 2]
+
+
+===== matrix.pkl: behavior_matrix =====
+
+sparse_graphs: (click_sparse_graph, favor_sparse_graph, consume_sparse_graph) = sparse_graphs
+               behavior interaction matrix including click, favor and consume(order)
+uid_embed: initialize poi id matrix [total_user_number, id_embed_size]
+pid_embed: initialize user id matrix [total_poi_number, id_embed_size]
+
+
+
+===== data.pkl: vector_dict =====
+pretrained vector from Tencent AI Lab
+
+
+===== matrix.pkl: Matrixes =====
+
+uaw_matrix: WAU meta path for each user [total_user_number, max_ua_length, max_uaw_length]
+paw_matrix: WAP meta path in WAPU meta path for each poi [total_poi_number, max_pa_length, max_paw_length]
+pu_matrix: CL user samples for each poi [total_poi_number, pos_neg_sample * 2]
+
+
+===== matrix.pkl: behavior_matrix =====
+
+sparse_graphs: (click_sparse_graph, favor_sparse_graph, consume_sparse_graph) = sparse_graphs
+               behavior interaction matrix including click, favor and consume(order)
+uid_embed: initialize poi id matrix [total_user_number, id_embed_size]
+pid_embed: initialize user id matrix [total_poi_number, id_embed_size]
+
