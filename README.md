@@ -1,6 +1,6 @@
 # POT
 
-This repository is the official implementation of the SIGIR 2022 Paper [Personalized Abstractive Opinion Tagging](https://github.com/MengxueZhao/POT).
+This repository is the official implementation of the SIGIR 2022 Paper [Personalized Abstractive Opinion Tagging](https://staff.fnwi.uva.nl/m.derijke/wp-content/papercite-data/pdf/zhao-2022-personalized.pdf).
 
 If you have any question, please open an issue or contact <keninazhao@163.com>.
 
@@ -50,10 +50,9 @@ bash script/run.sh POT 0 0
 ## Reference
 If you find our code useful, please cite our paper as follows:
 ```bibtex
-@inproceedings{pot-2022,
+@article{zhao2022personalized,
   title={Personalized Abstractive Opinion Tagging},
-  author={Mengxue, Zhao and Yang, Yang and Miao, Li and Jingang, Wang and Wei, Wu and Pengjie, Ren and de Rijke, Maarten and Zhaochun, Ren},
-  booktitle={SIGIR},
-  year={2022},
+  author={Zhao, Mengxue and Yang, Yang and Li, Miao and Wang, Jingang and Wu, Wei and Ren, Pengjie and de Rijke, Maarten and Ren, Zhaochun},
+  year={2022}
 }
 ```
